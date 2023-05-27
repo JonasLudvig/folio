@@ -124,10 +124,7 @@ export default function Projects() {
             <h4>Portfolio</h4>
             <p>Design and continuous development of this website.</p>
             <div>
-              <a
-                href='https://github.com/jonasludvig/twitch-rest-api/'
-                target='_blank'
-              >
+              <a href='https://github.com/jonasludvig/folio/' target='_blank'>
                 <img
                   src={github}
                   className='icon repo minor'
