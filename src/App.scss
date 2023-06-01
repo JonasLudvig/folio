@@ -114,7 +114,7 @@ a:active {
 
 .banner {
   align-items: center;
-  background: $sctClr;
+  background: $bgClr;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,10 +122,6 @@ a:active {
   padding: 0 35px 0 35px;
   position: relative;
   text-align: center;
-  .logo {
-    margin: 0 0 28px 0;
-    width: 120px;
-  }
   .down {
     bottom: 0px;
     padding: 30px;
@@ -135,12 +131,133 @@ a:active {
     width: 36px;
   }
   h1 {
-    color: #1e1e1e;
+    color: #ff6767;
     font-size: 72px;
   }
   h2 {
+    color: #423e3b;
     font-size: 34px;
     margin: 10px 0 0 0;
+  }
+
+  .cloud-wrapper {
+    position: relative;
+    scale: 0.8;
+  }
+  .cloud-container {
+    position: absolute;
+    animation: hover;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    position: relative;
+    height: 220px;
+    width: 342px;
+    scale: 0.95;
+    transform: (scale(1, 0.95));
+
+    div {
+      position: absolute;
+      background: #7a3476;
+      transition: 0.5s;
+    }
+  }
+
+  .cloud-container:hover {
+    div {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes hover {
+    0% {
+      transform: scale(1, 0.95);
+      top: 0;
+    }
+    50% {
+      transform: scale(1, 1);
+      top: -20px;
+    }
+    100% {
+      transform: scale(1, 0.95);
+      top: 0;
+    }
+  }
+
+  @keyframes warp {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes warp-inv {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+
+  .c-1 {
+    top: 10px;
+    left: 85px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: warp;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+  }
+  .c-2 {
+    top: 60px;
+    left: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .c-3 {
+    top: 85px;
+    left: 210px;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+  }
+  .c-4 {
+    top: 60px;
+    left: 240px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: warp-inv;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+  }
+  .c-5 {
+    top: 25px;
+    left: 70px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+  .c-6 {
+    top: 110px;
+    left: 84px;
+    width: 190px;
+    height: 100px;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
   }
 }
 
