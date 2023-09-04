@@ -5,8 +5,8 @@ export default function APIs() {
     <>
       <div className='article-container'>
         <div>
-          <h1>APIs</h1>
-          <h2>General practice</h2>
+          <h1>Transit</h1>
+          <h2>APIs, general practice</h2>
           <p className='deck'>
             My technical stack when developing APIs varies with scale and
             purpose. I typically rely on ASP.NET Core and Java for building user

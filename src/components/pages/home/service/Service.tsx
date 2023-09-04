@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import { useEffect, useState } from 'react';
-import right from './static/right.svg';
+import stack from './type/stack.svg';
 
 export default function Service() {
   return (
@@ -10,7 +9,9 @@ export default function Service() {
           <h4>Frontend</h4>
           <p>Interface development using modern techniques and frameworks.</p>
         </div>
-        <div className='service-image'></div>
+        <div className='service-image'>
+          <img src={stack} alt='Stack' />
+        </div>
         <div className='service-item about-item-second-js'>
           <h4>Backend</h4>
           <p>Sustainable and secure user platform and utility development.</p>
