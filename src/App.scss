@@ -32,6 +32,10 @@ body {
   background: $pnlClr;
 }
 
+body {
+  text-rendering: optimizeLegibility;
+}
+
 h1 {
   color: $fntClr;
   font-family: JosefinSans-Light, sans-serif;

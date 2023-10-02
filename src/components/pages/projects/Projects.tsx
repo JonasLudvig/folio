@@ -13,7 +13,7 @@ export default function Projects() {
           <div className='projects-item'>
             <h4>ASP.NET Core Web REST API and Application</h4>
             <p>
-              System to publish, update and remove live website contents with
+              User platform to publish and manage live website contents with
               user administration and features, such as authorization, data
               encryption, key vaulting and extensive input control. Frontend and
               backend subsists mutually isolated and self&#8209;sustained.
@@ -78,21 +78,21 @@ export default function Projects() {
             <p>
               Application for returning live Twitch data. API stores and
               validates key returned by the Twitch API to reference with
-              requests, returning responses as JSONs. May not be used for
-              developing applications.
+              requests, returning responses as JSONs. Client application manages
+              all user data client-side.
             </p>
             <div className='preview-desktop'>
               <img src={twDesktop} alt='Application on desktop' />
             </div>
             <div>
               <a
-                href='https://github.com/jonasludvig/twitch-rest-api/'
+                href='https://github.com/jonasludvig/twitch-web-api-client/'
                 target='_blank'
               >
                 <img src={github} className='icon repo' alt='GitHub logo' />
               </a>
               <a
-                href='https://qsdlr.org/twitch-rest-api-application/'
+                href='https://qsdlr.org/twitch-web-api-client/'
                 target='_blank'
               >
                 <img src={open} className='icon' alt='Open in new tab' />
@@ -116,6 +116,12 @@ export default function Projects() {
               </div>
               <div>
                 <p>OAuth 2.0</p>
+              </div>
+              <div>
+                <p>TypeScript</p>
+              </div>
+              <div>
+                <p>Sass</p>
               </div>
             </div>
           </div>
