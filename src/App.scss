@@ -1,19 +1,19 @@
 @font-face {
-  font-family: JosefinSans-Light;
-  font-weight: 300;
-  src: url(../src/static/fonts/josefin/JosefinSans-Light.ttf);
+  font-family: NeueKabel;
+  font-weight: 400;
+  src: url(../src/static/fonts/neue-kabel/NeueKabel.otf);
 }
 
 @font-face {
-  font-family: JosefinSans-Regular;
-  font-weight: 400;
-  src: url(../src/static/fonts/josefin/JosefinSans-Regular.ttf);
+  font-family: NeueKabel-Medium;
+  font-weight: 500;
+  src: url(../src/static/fonts/neue-kabel/NeueKabel-Medium.otf);
 }
 
 @font-face {
   font-family: FuturaPTMedium;
   font-weight: 500;
-  src: url(../src/static/fonts/futura/FuturaPTMedium.ttf);
+  src: url(../src/static/fonts/futura-pt/FuturaPTMedium.ttf);
 }
 
 $bgClr: #e1d1c2;
@@ -38,40 +38,47 @@ body {
 
 h1 {
   color: $fntClr;
-  font-family: JosefinSans-Light, sans-serif;
+  font-family: NeueKabel;
   font-size: 64px;
+  font-weight: 400;
+  line-height: 90%;
 }
 
 h2 {
   color: $fntClr;
-  font-family: JosefinSans-Light, sans-serif;
+  font-family: NeueKabel;
   font-size: 38px;
+  font-weight: 400;
 }
 
 h3 {
   color: $fntClr;
-  font-family: JosefinSans-Regular, sans-serif;
+  font-family: NeueKabel-Medium;
   font-size: 24px;
+  font-weight: 500;
 }
 
 h4 {
   color: $fntClr;
-  font-family: JosefinSans-Light, sans-serif;
+  font-family: NeueKabel;
   font-size: 38px;
+  font-weight: 400;
 }
 
 p {
   color: $fntClr;
   font-family: FuturaPTMedium, sans-serif;
   font-size: 18px;
+  font-weight: 500;
 }
 
 a,
 a:visited,
 a:active {
   color: #f2f2f2;
-  font-family: JosefinSans-Regular, sans-serif;
+  font-family: NeueKabel-Medium, sans-serif;
   font-size: 18px;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -309,6 +316,7 @@ a:active {
     img {
       user-select: none;
       width: 24px;
+      transform: translate(0, 1px);
     }
   }
 }
@@ -351,7 +359,7 @@ a:active {
       h1 {
         color: #ff6767;
         font-size: 48px;
-        margin: 10px 0 0 0;
+        margin: 4px 0 16px 0;
         transition: 0.2s;
       }
       h2 {
@@ -400,7 +408,7 @@ a:active {
   padding: 40px;
   text-align: center;
   p {
-    margin: 14px 0 0 0;
+    margin: 10px 0 0 0;
   }
 }
 
@@ -525,6 +533,7 @@ a:active {
     justify-content: center;
     p {
       white-space: nowrap;
+      margin: 10px 0 0 0;
     }
   }
 }

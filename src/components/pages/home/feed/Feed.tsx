@@ -14,7 +14,6 @@ export default function Feed() {
             <p>Read</p>
             {/* <img
               src={right}
-              className='expandable-icon'
               alt='Arrow pointing east'
             /> */}
           </div>
@@ -29,11 +28,7 @@ export default function Feed() {
             <p>My approach towards working with APIs.</p>
             <div>
               <p>Read</p>
-              <img
-                src={right}
-                className='expandable-icon'
-                alt='Arrow pointing east'
-              />
+              <img src={right} alt='Arrow pointing east' />
             </div>
           </div>
         </a>
@@ -44,11 +39,7 @@ export default function Feed() {
             <p>Few thoughts on building interfaces.</p>
             <div>
               <p>Read</p>
-              <img
-                src={right}
-                className='expandable-icon'
-                alt='Arrow pointing east'
-              />
+              <img src={right} alt='Arrow pointing east' />
             </div>
           </div>
         </a>
@@ -60,7 +51,6 @@ export default function Feed() {
             <p>Read</p>
             {/* <img
               src={right}
-              className='expandable-icon'
               alt='Arrow pointing east'
             /> */}
           </div>
