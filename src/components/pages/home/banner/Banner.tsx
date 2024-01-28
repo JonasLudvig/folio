@@ -14,7 +14,7 @@ export default function Banner() {
         </div>
       </div>
       <h1>Jonas Lind</h1>
-      <h2>Full-stack Developer</h2>
+      <h2>Full-stack developer</h2>
       <img src={down} className='down' alt='Arrow pointing downward' />
     </div>
   );

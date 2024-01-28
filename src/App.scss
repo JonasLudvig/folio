@@ -115,6 +115,9 @@ a:active {
         a {
           font-size: 18px;
         }
+        a:hover {
+          color: $bgClr;
+        }
       }
     }
     .entries {
@@ -427,11 +430,39 @@ a:active {
   }
 }
 
+.projects-header {
+  align-items: center;
+  background: $sctClr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // min-height: 300px;
+  padding: 180px 40px 100px 40px;
+  text-align: center;
+  p {
+    font-size: 19px;
+    margin: 16px 0 0 0;
+    max-width: 1280px;
+  }
+}
+
+.projects-description {
+  background: $accClr;
+  display: flex;
+  justify-content: center;
+  padding: 0 40px 0 40px;
+  h2 {
+    color: $bgClr;
+    max-width: 1280px;
+    width: 100%;
+  }
+}
+
 .projects {
   background: $bgClr;
   display: flex;
   justify-content: center;
-  padding: 120px 40px 40px 40px;
+  padding: 60px 40px 90px 40px;
 }
 
 .projects-container {
@@ -464,7 +495,6 @@ a:active {
     gap: 20px;
     width: 100%;
   }
-
   .preview-desktop {
     img {
       width: 100%;
@@ -944,6 +974,23 @@ a:active {
         margin: 10px 0 0 0;
       }
     }
+  }
+  .navigation {
+    padding: 0 20px !important;
+  }
+  .feed,
+  .service {
+    display: block;
+    padding: 20px;
+  }
+  .operation {
+    padding: 130px 20px;
+  }
+  .projects {
+    padding: 100px 20px 20px 20px;
+  }
+  .contact {
+    padding: 150px 20px 130px 20px;
   }
 }
 

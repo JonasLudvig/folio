@@ -874,6 +874,23 @@ a:active {
     float: unset;
     margin: 10px 0 0 0;
   }
+  .navigation {
+    padding: 0 20px !important;
+  }
+  .feed,
+  .service {
+    display: block;
+    padding: 20px;
+  }
+  .operation {
+    padding: 130px 20px;
+  }
+  .projects {
+    padding: 100px 20px 20px 20px;
+  }
+  .contact {
+    padding: 150px 20px 130px 20px;
+  }
 }
 @media (min-width: 368px) and (max-width: 420px) {
   .feed-container {

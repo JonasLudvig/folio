@@ -4,10 +4,24 @@ import open from '../../../static/icons/open.svg';
 import ditrDesktop from './static/ditr-desktop.png';
 import ditrMobile from './static/ditr-mobile.png';
 import twDesktop from './static/tw-desktop.png';
+import engineDesktop from './static/engine-desktop.png';
 
 export default function Projects() {
   return (
     <>
+      <div className='projects-header'>
+        <h1>Project library</h1>
+        <p>
+          Here I keep a few applications showcasing my work as an independant
+          developer and designer. The idéa of this library is to offer some
+          insight about what I do and to feature a bit of everything –
+          particularly the scope beyond designing end-to-end technologies, which
+          is my main thing.
+        </p>
+      </div>
+      <div className='projects-description'>
+        <h2>Platforms</h2>
+      </div>
       <div className='projects'>
         <div className='projects-container'>
           <div className='projects-item'>
@@ -153,6 +167,39 @@ export default function Projects() {
               </div>
               <div>
                 <p>Photoshop</p>
+              </div>
+              <div>
+                <p>Illustrator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='projects-description'>
+        <h2>Frameworks</h2>
+      </div>
+      <div className='projects'>
+        <div className='projects-container'>
+          <div className='projects-item'>
+            <h4>2D Engine and Demo</h4>
+            <p>
+              Feature-packed JavaScript driven engine, which could be used for
+              pretty much anything. Research project in early prototype stage.
+            </p>
+            <div className='preview-desktop'>
+              <img src={engineDesktop} alt='Application on desktop' />
+            </div>
+            <div>
+              <a href='https://qsdlr.org/2d-engine/' target='_blank'>
+                <img src={open} className='icon' alt='Open in new tab' />
+              </a>
+            </div>
+            <div className='project-stack-container'>
+              <div>
+                <p>TypeScript</p>
+              </div>
+              <div>
+                <p>Sass</p>
               </div>
               <div>
                 <p>Illustrator</p>
