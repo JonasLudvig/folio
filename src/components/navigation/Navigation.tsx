@@ -5,9 +5,11 @@ export default function Banner() {
     <div className='navigation-container'>
       <div className='navigation'>
         <div>
-          <a href='/'>
-            <img src={logo} alt='Logo reading "JL"' />
-          </a>
+          <img
+            src={logo}
+            alt='Logo reading "JL"'
+            onClick={() => (window.location.href = '/')}
+          />
         </div>
         <div className='entries'>
           <div>

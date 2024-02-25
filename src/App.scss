@@ -104,6 +104,7 @@ a:active {
       img {
         filter: invert(100%) sepia(80%) saturate(227%) hue-rotate(272deg)
           brightness(112%) contrast(90%);
+        cursor: pointer;
         user-select: none;
         width: 36px;
       }
@@ -125,153 +126,53 @@ a:active {
     }
   }
 }
-
 .banner {
   align-items: center;
-  background: $bgClr;
+  background: #b3a398;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
-  padding: 0 35px 0 35px;
+  min-height: 100dvh;
+  padding: 0 40px;
   position: relative;
   text-align: center;
-  .down {
-    bottom: 0px;
-    padding: 30px;
-    pointer-events: none;
-    position: absolute;
-    user-select: none;
-    width: 36px;
-  }
   h1 {
-    color: #ff6767;
+    color: #867070;
     font-size: 72px;
+    position: fixed;
   }
   h2 {
     color: #423e3b;
     font-size: 34px;
-    margin: 10px 0 0 0;
+    position: fixed;
+    transform: translateY(62px);
   }
-
-  .cloud-wrapper {
-    position: relative;
-    scale: 0.8;
+  img {
+    bottom: 0;
+    pointer-events: none;
+    position: fixed;
+    transform: translatey(-100px);
+    user-select: none;
+    width: 36px;
   }
-  .cloud-container {
-    position: absolute;
-    animation: hover;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    position: relative;
-    height: 220px;
-    width: 342px;
-    scale: 0.95;
-    transform: (scale(1, 0.95));
-
-    div {
-      position: absolute;
-      background: #7a3476;
-      transition: 0.5s;
-    }
-  }
-
-  .cloud-container:hover {
-    div {
-      opacity: 0.5;
-    }
-  }
-
-  @keyframes hover {
-    0% {
-      transform: scale(1, 0.95);
-      top: 0;
-    }
-    50% {
-      transform: scale(1, 1);
-      top: -20px;
-    }
-    100% {
-      transform: scale(1, 0.95);
-      top: 0;
-    }
-  }
-
-  @keyframes warp {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(0.9);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes warp-inv {
-    0% {
-      transform: scale(0.9);
-    }
-    50% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0.9);
-    }
-  }
-
-  .c-1 {
-    top: 10px;
-    left: 85px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    animation: warp;
-    animation-iteration-count: infinite;
-    animation-duration: 7s;
-    animation-timing-function: ease-in-out;
-  }
-  .c-2 {
-    top: 60px;
-    left: 10px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-  }
-  .c-3 {
-    top: 85px;
-    left: 210px;
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-  }
-  .c-4 {
-    top: 60px;
-    left: 240px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    animation: warp-inv;
-    animation-iteration-count: infinite;
-    animation-duration: 7s;
-    animation-timing-function: ease-in-out;
-  }
-  .c-5 {
-    top: 25px;
-    left: 70px;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-  }
-  .c-6 {
-    top: 110px;
-    left: 84px;
-    width: 190px;
+  div {
+    background: $bgClr;
+    bottom: 0px;
+    clip-path: polygon(
+      47% 35%,
+      68% 20%,
+      84% 35%,
+      100% 0,
+      100% 100%,
+      100% 100%,
+      0 100%,
+      0 0,
+      14% 23%,
+      33% 11%
+    );
     height: 100px;
-    border-top-left-radius: 55px;
-    border-top-right-radius: 55px;
+    position: absolute;
+    width: 100%;
   }
 }
 
@@ -280,6 +181,8 @@ a:active {
   display: flex;
   justify-content: center;
   padding: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .feed-container {
@@ -317,9 +220,9 @@ a:active {
     position: absolute;
     transition: 0.25s;
     img {
+      transform: translate(0, 1px);
       user-select: none;
       width: 24px;
-      transform: translate(0, 1px);
     }
   }
 }
@@ -356,6 +259,8 @@ a:active {
   gap: 40px;
   justify-content: center;
   padding: 150px 40px;
+  position: relative;
+  z-index: 1;
   div {
     div {
       width: 480px;
@@ -381,8 +286,8 @@ a:active {
   .image {
     width: 500px;
     img {
-      width: 100%;
       transition: 0.25s;
+      width: 100%;
     }
   }
 }
@@ -392,6 +297,8 @@ a:active {
   display: flex;
   justify-content: center;
   padding: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .service-container {
@@ -436,7 +343,6 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // min-height: 300px;
   padding: 180px 40px 100px 40px;
   text-align: center;
   p {
@@ -562,8 +468,8 @@ a:active {
     flex-direction: column;
     justify-content: center;
     p {
-      white-space: nowrap;
       margin: 10px 0 0 0;
+      white-space: nowrap;
     }
   }
 }
@@ -606,6 +512,8 @@ a:active {
   flex-direction: column;
   height: 400px;
   justify-content: center;
+  position: relative;
+  z-index: 1;
   p {
     color: #f2f2f2;
   }

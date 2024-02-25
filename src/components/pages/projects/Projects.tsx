@@ -176,7 +176,7 @@ export default function Projects() {
         </div>
       </div>
       <div className='projects-description'>
-        <h2>Frameworks</h2>
+        <h2>Tools & frameworks</h2>
       </div>
       <div className='projects'>
         <div className='projects-container'>

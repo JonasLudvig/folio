@@ -13,7 +13,7 @@ export default function Operation() {
         <div>
           <div>
             <p>
-              I specialize in leveraging a wide array of framework to design,
+              I specialize in leveraging a wide array of frameworks to design,
               develop, publish, and maintain applications for web, desktop and
               mobile.
             </p>
