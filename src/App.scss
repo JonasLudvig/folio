@@ -22,6 +22,8 @@ $pnlClr: #131313;
 $accClr: #faad80;
 $fntClr: #2d2926;
 
+$prmRds: 20px;
+
 * {
   margin: 0;
   padding: 0;
@@ -88,7 +90,7 @@ a:active {
   justify-content: center;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   .navigation {
     align-items: center;
     display: flex;
@@ -196,6 +198,7 @@ a:active {
   align-items: center;
   aspect-ratio: 1;
   background: $sctClr;
+  border-radius: $prmRds;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -236,6 +239,7 @@ a:active {
 
 .feed-image {
   background: $accClr;
+  border-radius: $prmRds;
   grid-column: 2/4;
   grid-row: 1/2;
   position: relative;
@@ -308,22 +312,58 @@ a:active {
   max-width: 1280px;
 }
 
+.service-item-back {
+  opacity: 0;
+}
+
 .service-item {
   align-items: center;
   aspect-ratio: 1;
   background: $sctClr;
+  border-radius: $prmRds;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 40px;
+  position: relative;
   text-align: center;
+  transition: 0.5s;
+  z-index: 1;
   p {
     margin: 10px 0 0 0;
   }
+  p,
+  h4 {
+    transition: 0.5s;
+  }
+  span {
+    color: $sctClr;
+    font-family: FuturaPTMedium, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0;
+    padding: 40px;
+    position: absolute;
+    transition: 0.5s;
+  }
+}
+
+.service-item:hover {
+  h4,
+  p {
+    cursor: default;
+    opacity: 0;
+    user-select: none;
+  }
+  span {
+    opacity: 1;
+  }
+  background: #b3a398;
 }
 
 .service-image {
   background: $accClr;
+  border-radius: $prmRds;
   grid-column: 1/3;
   grid-row: 2/2;
   position: relative;
@@ -354,11 +394,15 @@ a:active {
 
 .projects-description {
   background: $accClr;
+  background: #b3a398;
+
   display: flex;
   justify-content: center;
   padding: 0 40px 0 40px;
   h2 {
     color: $bgClr;
+    // color: #eebfa1;
+    // color: #867070;
     max-width: 1280px;
     width: 100%;
   }
@@ -381,6 +425,7 @@ a:active {
 .projects-item {
   align-items: center;
   background: #7a3476;
+  border-radius: $prmRds;
   display: flex;
   flex-direction: column;
   height: fit-content;
@@ -438,6 +483,7 @@ a:active {
       user-select: none;
       p {
         background: #61295e;
+        border-radius: 6px;
         cursor: default;
         display: inline;
         display: inline;
