@@ -20,7 +20,7 @@
 
 html,
 body {
-  background: #131313;
+  background: #b3a398;
 }
 
 body {
@@ -74,10 +74,10 @@ a:active {
 }
 
 .navigation-container {
-  background: #131313;
   display: flex;
   justify-content: center;
   position: fixed;
+  transition: 0.5s;
   width: 100%;
   z-index: 2;
 }
@@ -96,26 +96,51 @@ a:active {
   gap: 18px;
 }
 .navigation-container .navigation div img {
-  filter: invert(100%) sepia(80%) saturate(227%) hue-rotate(272deg) brightness(112%) contrast(90%);
   cursor: pointer;
+  display: none;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  width: 36px;
+  transition: 0.5s;
+  width: 48px;
+  transform: translateY(60px);
 }
 .navigation-container .navigation div img:hover {
-  filter: invert(93%) sepia(15%) saturate(627%) hue-rotate(316deg) brightness(102%) contrast(76%);
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: navigationLogoHover;
 }
 .navigation-container .navigation div div a {
-  font-size: 18px;
+  transition: 0.5s;
+  transform: translateY(60px);
+  display: none;
+  font-size: 28px;
 }
 .navigation-container .navigation div div a:hover {
-  color: #e1d1c2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: navigationEntryHover;
 }
 .navigation-container .navigation .entries {
   margin: 0 0 0 auto;
 }
 
+@keyframes navigationEntryHover {
+  0% {
+    color: #e1d1c2;
+  }
+  100% {
+    color: #e1d1c2;
+  }
+}
+@keyframes navigationLogoHover {
+  0% {
+    filter: invert(93%) sepia(15%) saturate(627%) hue-rotate(316deg) brightness(102%) contrast(76%);
+  }
+  100% {
+    filter: invert(93%) sepia(15%) saturate(627%) hue-rotate(316deg) brightness(102%) contrast(76%);
+  }
+}
 .banner {
   align-items: center;
   background: #b3a398;
@@ -139,10 +164,14 @@ a:active {
   transform: translateY(62px);
 }
 .banner img {
+  animation-delay: 3s;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation: bounce;
   bottom: 0;
   pointer-events: none;
   position: fixed;
-  transform: translatey(-100px);
+  transform: translateY(-100px);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -156,6 +185,20 @@ a:active {
   height: 100px;
   position: absolute;
   width: 100%;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-100px);
+  }
+  10% {
+    transform: translateY(-120px);
+  }
+  15% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
 }
 
 .feed {
@@ -178,12 +221,14 @@ a:active {
   align-items: center;
   aspect-ratio: 1;
   background: #f2f2f2;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 40px;
   position: relative;
   text-align: center;
+  transition: 0.45s;
 }
 .feed-item h3 {
   font-size: 20px;
@@ -218,9 +263,11 @@ a:active {
 
 .feed-image {
   background: #faad80;
+  border-radius: 20px;
   grid-column: 2/4;
   grid-row: 1/2;
   position: relative;
+  transition: 0.45s;
 }
 .feed-image img {
   left: 50%;
@@ -231,10 +278,6 @@ a:active {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-
-.inactive {
-  opacity: 0.6;
 }
 
 .operation {
@@ -290,25 +333,65 @@ a:active {
   max-width: 1280px;
 }
 
+.service-item-back {
+  opacity: 0;
+}
+
 .service-item {
   align-items: center;
   aspect-ratio: 1;
   background: #f2f2f2;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 40px;
+  position: relative;
   text-align: center;
+  transition: 0.5s;
+  z-index: 1;
 }
 .service-item p {
   margin: 10px 0 0 0;
 }
+.service-item p,
+.service-item h4 {
+  transition: 0.5s;
+}
+.service-item span {
+  color: #f2f2f2;
+  font-family: FuturaPTMedium, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0;
+  padding: 40px;
+  position: absolute;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.service-item:hover {
+  background: #b3a398;
+}
+.service-item:hover h4,
+.service-item:hover p {
+  cursor: default;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.service-item:hover span {
+  opacity: 1;
+}
 
 .service-image {
   background: #faad80;
+  border-radius: 20px;
   grid-column: 1/3;
   grid-row: 2/2;
   position: relative;
+  transition: 0.45s;
 }
 .service-image img {
   left: 50%;
@@ -323,34 +406,37 @@ a:active {
 
 .projects-header {
   align-items: center;
-  background: #f2f2f2;
+  background: #1e1e1e;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 180px 40px 100px 40px;
   text-align: center;
 }
+.projects-header h1 {
+  color: #f2f2f2;
+}
 .projects-header p {
+  color: #f2f2f2;
   font-size: 19px;
   margin: 16px 0 0 0;
   max-width: 1280px;
 }
 
 .projects-description {
-  background: #faad80;
-  background: #b3a398;
+  background: #1e1e1e;
   display: flex;
   justify-content: center;
   padding: 0 40px 0 40px;
 }
 .projects-description h2 {
-  color: #e1d1c2;
+  color: #787878;
   max-width: 1280px;
   width: 100%;
 }
 
 .projects {
-  background: #e1d1c2;
+  background: #1e1e1e;
   display: flex;
   justify-content: center;
   padding: 60px 40px 90px 40px;
@@ -366,6 +452,7 @@ a:active {
 .projects-item {
   align-items: center;
   background: #7a3476;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   height: -moz-fit-content;
@@ -425,6 +512,7 @@ a:active {
 }
 .projects-item .project-stack-container div p {
   background: #61295e;
+  border-radius: 6px;
   cursor: default;
   display: inline;
   display: inline;
@@ -438,7 +526,7 @@ a:active {
 }
 
 .contact {
-  background: #f2f2f2;
+  background: #867070;
   display: flex;
   gap: 30px;
   justify-content: center;
@@ -453,9 +541,13 @@ a:active {
   flex-direction: column;
   justify-content: center;
 }
+.contact div h1 {
+  color: #f2f2f2;
+}
 .contact div p {
   margin: 10px 0 0 0;
   white-space: nowrap;
+  color: #f2f2f2;
 }
 
 .article-container {
@@ -523,6 +615,15 @@ a:active {
   width: 56px;
 }
 
+@media (min-width: 1100px) and (max-width: 1268px) {
+  .service-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .service-image {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+}
 @media (min-width: 950px) and (max-width: 1100px) {
   .feed-item h3 {
     position: absolute;

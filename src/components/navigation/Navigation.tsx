@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import logo from './static/logo.svg';
 
-export default function Banner() {
+export default function Navigation() {
   const navigationContainer = useRef<HTMLDivElement>(null);
   const navigation = useRef<HTMLDivElement>(null);
   const links = useRef<HTMLElement[]>([]);
@@ -14,8 +14,10 @@ export default function Banner() {
         !links.current ||
         !navigation.current ||
         !image.current
-      )
+      ) {
         return;
+      }
+
       if (window.scrollY < 1) {
         navigationContainer.current.style.backgroundColor = 'transparent';
         image.current.style.transform = 'translateY(60px)';
@@ -34,8 +36,6 @@ export default function Banner() {
         });
       }
     };
-
-    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
 

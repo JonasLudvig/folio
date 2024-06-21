@@ -183,8 +183,8 @@ export default function Projects() {
           <div className='projects-item'>
             <h4>2D Engine and Demo</h4>
             <p>
-              Feature-packed JavaScript driven engine, which could be used for
-              pretty much anything. Research project in early prototype stage.
+              Feature-packed JavaScript driven engine with no specific purpose.
+              Research project in early prototype stage.
             </p>
             <div className='preview-desktop'>
               <img src={engineDesktop} alt='Application on desktop' />

@@ -5,15 +5,10 @@ export default function Banner() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY / 2);
-    };
-
+    const handleScroll = () => setScrollY(window.scrollY / 2);
     window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
