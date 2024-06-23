@@ -295,7 +295,6 @@ a:active {
 .feed-item:hover {
   background: #ffffff;
   scale: 1.03;
-  // transform: rotate(-5deg);
   div {
     display: flex;
     gap: 12px;
@@ -409,11 +408,19 @@ a:active {
     transition: 0.5s;
     z-index: 2;
   }
+  img {
+    bottom: 10px;
+    left: 18px;
+    position: absolute;
+    transition: 0.5s;
+    width: 38px;
+  }
 }
 
 .service-item:hover {
   h4,
-  p {
+  p,
+  img {
     cursor: default;
     opacity: 0;
     user-select: none;
@@ -653,6 +660,27 @@ a:active {
       position: relative;
       width: 56px;
     }
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+}
+
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+*:focus {
+  outline: none;
+}
+
+@media (pointer: coarse) {
+  :focus {
+    outline: none;
   }
 }
 
@@ -948,7 +976,6 @@ a:active {
   .feed-container {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .feed-image {
     grid-column: 2/3;
     grid-row: 4/2;
@@ -1056,7 +1083,8 @@ a:active {
   .projects {
     padding: 100px 20px 20px 20px;
   }
-  .contact {
+  .contact,
+  .article-container {
     padding: 150px 20px 130px 20px;
   }
 }
@@ -1120,6 +1148,24 @@ a:active {
         margin: 10px 0 0 0;
       }
     }
+  }
+  .navigation {
+    padding: 0 20px !important;
+  }
+  .feed,
+  .service {
+    display: block;
+    padding: 20px;
+  }
+  .operation {
+    padding: 130px 20px;
+  }
+  .projects {
+    padding: 100px 20px 20px 20px;
+  }
+  .contact,
+  .article-container {
+    padding: 150px 20px 130px 20px;
   }
 }
 
@@ -1194,5 +1240,23 @@ a:active {
         margin: 10px 0 0 0;
       }
     }
+  }
+  .navigation {
+    padding: 0 20px !important;
+  }
+  .feed,
+  .service {
+    display: block;
+    padding: 20px;
+  }
+  .operation {
+    padding: 130px 20px;
+  }
+  .projects {
+    padding: 100px 20px 20px 20px;
+  }
+  .contact,
+  .article-container {
+    padding: 150px 20px 130px 20px;
   }
 }
